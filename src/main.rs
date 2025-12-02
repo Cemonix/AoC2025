@@ -1,7 +1,8 @@
 mod day_1;
+mod day_2;
 mod utils;
 
-const DAY: &str = "day_1";
+const DAY: &str = "day_2";
 
 fn main() {
     match DAY {
@@ -11,7 +12,12 @@ fn main() {
                 Err(err) => println!("Error: {}", err),
             }
         },
-        "day_2" => unimplemented!(),
+        "day_2" => {
+            match day_2::invalid_ids("data/day_2.txt") {
+                Ok(result) => println!("Day 2, Invalid Ids sum: {}", result),
+                Err(err) => println!("Error: {}", err),
+            }
+        },
         "day_3" => unimplemented!(),
         "day_4" => unimplemented!(),
         "day_5" => unimplemented!(),
