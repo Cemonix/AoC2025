@@ -1,8 +1,10 @@
 mod day_1;
 mod day_2;
+mod day_3;
+mod day_4;
 mod utils;
 
-const DAY: &str = "day_2";
+const DAY: &str = "day_4";
 
 fn main() {
     match DAY {
@@ -18,8 +20,18 @@ fn main() {
                 Err(err) => println!("Error: {}", err),
             }
         },
-        "day_3" => unimplemented!(),
-        "day_4" => unimplemented!(),
+        "day_3" => {
+            match day_3::batteries("data/day_3.txt") {
+                Ok(result) => println!("Day 3, Output joltage: {}", result),
+                Err(err) => println!("Error: {}", err),
+            }
+        },
+        "day_4" => {
+            match day_4::rolls_of_paper("data/day_4.txt") {
+                Ok(result) => println!("Day 4, Rollf os paper {}", result),
+                Err(err) => println!("Error: {}", err),
+            }
+        },
         "day_5" => unimplemented!(),
         "day_6" => unimplemented!(),
         "day_7" => unimplemented!(),
