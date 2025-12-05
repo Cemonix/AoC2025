@@ -2,9 +2,10 @@ mod day_1;
 mod day_2;
 mod day_3;
 mod day_4;
+mod day_5;
 mod utils;
 
-const DAY: &str = "day_4";
+const DAY: &str = "day_5";
 
 fn main() {
     match DAY {
@@ -32,7 +33,12 @@ fn main() {
                 Err(err) => println!("Error: {}", err),
             }
         },
-        "day_5" => unimplemented!(),
+        "day_5" => {
+            match day_5::ingredients("data/day_5.txt") {
+                Ok(result) => println!("Day 4, Fresh ingredients {}", result),
+                Err(err) => println!("Error: {}", err),
+            }
+        },
         "day_6" => unimplemented!(),
         "day_7" => unimplemented!(),
         "day_8" => unimplemented!(),
