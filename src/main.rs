@@ -35,7 +35,7 @@ fn main() {
         },
         "day_5" => {
             match day_5::ingredients("data/day_5.txt") {
-                Ok(result) => println!("Day 4, Fresh ingredients {}", result),
+                Ok(result) => println!("Day 5, Fresh ingredients {}", result),
                 Err(err) => println!("Error: {}", err),
             }
         },
