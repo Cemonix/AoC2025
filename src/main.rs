@@ -3,9 +3,10 @@ mod day_2;
 mod day_3;
 mod day_4;
 mod day_5;
+mod day_6;
 mod utils;
 
-const DAY: &str = "day_5";
+const DAY: &str = "day_6";
 
 fn main() {
     match DAY {
@@ -39,7 +40,12 @@ fn main() {
                 Err(err) => println!("Error: {}", err),
             }
         },
-        "day_6" => unimplemented!(),
+        "day_6" => {
+            match day_6::grand_total("data/day_6.txt") {
+                Ok(result) => println!("Day 6, Grand total {}", result),
+                Err(err) => println!("Error: {}", err),
+            }
+        },
         "day_7" => unimplemented!(),
         "day_8" => unimplemented!(),
         "day_9" => unimplemented!(),
