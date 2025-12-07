@@ -4,9 +4,10 @@ mod day_3;
 mod day_4;
 mod day_5;
 mod day_6;
+mod day_7;
 mod utils;
 
-const DAY: &str = "day_6";
+const DAY: &str = "day_7";
 
 fn main() {
     match DAY {
@@ -46,7 +47,12 @@ fn main() {
                 Err(err) => println!("Error: {}", err),
             }
         },
-        "day_7" => unimplemented!(),
+        "day_7" => {
+            match day_7::tachyon("data/day_7.txt") {
+                Ok(result) => println!("Day 7, Tachyon beam {}", result),
+                Err(err) => println!("Error: {}", err),
+            }
+        },
         "day_8" => unimplemented!(),
         "day_9" => unimplemented!(),
         "day_10" => unimplemented!(),
