@@ -5,9 +5,10 @@ mod day_4;
 mod day_5;
 mod day_6;
 mod day_7;
+mod day_8;
 mod utils;
 
-const DAY: &str = "day_7";
+const DAY: &str = "day_8";
 
 fn main() {
     match DAY {
@@ -53,7 +54,12 @@ fn main() {
                 Err(err) => println!("Error: {}", err),
             }
         },
-        "day_8" => unimplemented!(),
+        "day_8" => {
+            match day_8::junction_boxes("data/day_8.txt") {
+                Ok(result) => println!("Day 8, Largest curcuits {}", result),
+                Err(err) => println!("Error: {}", err),
+            }
+        },
         "day_9" => unimplemented!(),
         "day_10" => unimplemented!(),
         "day_11" => unimplemented!(),
