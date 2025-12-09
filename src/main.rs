@@ -6,9 +6,10 @@ mod day_5;
 mod day_6;
 mod day_7;
 mod day_8;
+mod day_9;
 mod utils;
 
-const DAY: &str = "day_8";
+const DAY: &str = "day_9";
 
 fn main() {
     match DAY {
@@ -60,7 +61,12 @@ fn main() {
                 Err(err) => println!("Error: {}", err),
             }
         },
-        "day_9" => unimplemented!(),
+        "day_9" => {
+            match day_9::rectangle("data/day_9.txt") {
+                Ok(result) => println!("Day 9, Largest area {}", result),
+                Err(err) => println!("Error: {}", err),
+            }
+        },
         "day_10" => unimplemented!(),
         "day_11" => unimplemented!(),
         "day_12" => unimplemented!(),
