@@ -7,9 +7,10 @@ mod day_6;
 mod day_7;
 mod day_8;
 mod day_9;
+mod day_10;
 mod utils;
 
-const DAY: &str = "day_9";
+const DAY: &str = "day_10";
 
 fn main() {
     match DAY {
@@ -67,7 +68,12 @@ fn main() {
                 Err(err) => println!("Error: {}", err),
             }
         },
-        "day_10" => unimplemented!(),
+        "day_10" => {
+            match day_10::buttons("data/day_10.txt") {
+                Ok(result) => println!("Day 10, Buttons pressed {}", result),
+                Err(err) => println!("Error: {}", err),
+            }
+        },
         "day_11" => unimplemented!(),
         "day_12" => unimplemented!(),
         _ => unreachable!(),
