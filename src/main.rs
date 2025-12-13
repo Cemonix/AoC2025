@@ -8,9 +8,11 @@ mod day_7;
 mod day_8;
 mod day_9;
 mod day_10;
+mod day_11;
+mod day_12;
 mod utils;
 
-const DAY: &str = "day_10";
+const DAY: &str = "day_12";
 
 fn main() {
     match DAY {
@@ -74,8 +76,18 @@ fn main() {
                 Err(err) => println!("Error: {}", err),
             }
         },
-        "day_11" => unimplemented!(),
-        "day_12" => unimplemented!(),
+        "day_11" => {
+            match day_11::rack("data/day_11.txt") {
+                Ok(result) => println!("Day 11, Rack paths {}", result),
+                Err(err) => println!("Error: {}", err),
+            }
+        },
+        "day_12" => {
+            match day_12::present("data/day_12.txt") {
+                Ok(result) => println!("Day 12, Region presents fits {}", result),
+                Err(err) => println!("Error: {}", err),
+            }
+        },
         _ => unreachable!(),
     }
     
